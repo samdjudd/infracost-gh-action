@@ -33,7 +33,7 @@ outputs:
     description: The past total monthly cost estimate.
 runs:
   using: docker
-  image: docker://samdjudd/Costcast:latest # Use a specific version instead of latest if locking is preferred
+  image: public.ecr.aws/e2n3j1n6/costcast:latest # Use a specific version instead of latest if locking is preferred
   entrypoint: /scripts/ci/diff.sh # Do not change, this script lives in the Docker image and runs the GitHub Action logic
   args:
     - ${{ inputs.path }}
